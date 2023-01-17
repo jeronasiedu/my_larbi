@@ -14,6 +14,7 @@ import {
 import React, { useCallback, useRef } from "react"
 import { AiOutlineRight } from "react-icons/ai"
 import { BiLeftArrow, BiRightArrow } from "react-icons/all"
+import { useNavigate } from "react-router-dom"
 import { Autoplay } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 import heroImage from "../assets/hero.png"
@@ -48,6 +49,7 @@ const Hero = () => {
   ]
   const [isDesktop] = useMediaQuery("(min-width: 976px)")
   const [isTablet] = useMediaQuery("(min-width:768px)")
+  const navigate = useNavigate()
   const getSlidesPerView = () => {
     if (isDesktop) {
       return 3
@@ -97,6 +99,7 @@ const Hero = () => {
             w={["full", "auto"]}
             px={14}
             py={6}
+            onClick={() => navigate("/contact")}
           >
             Get In Touch
           </Button>
