@@ -140,7 +140,7 @@ const Hero = () => {
       >
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
-            <Box w="full" h={["sm"]}>
+            <Box w="full" h={["xs", "sm"]}>
               <Image
                 w="full"
                 rounded="md"
