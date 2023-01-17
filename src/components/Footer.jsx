@@ -3,12 +3,24 @@ import {
   Container,
   HStack,
   IconButton,
+  Link,
   Stack,
   Text,
 } from "@chakra-ui/react"
 import React from "react"
-import { BsWhatsapp } from "react-icons/bs"
+import { BiPhone, MdEmail } from "react-icons/all"
+
 const Footer = () => {
+  const footerLinks = [
+    {
+      icon: <MdEmail />,
+      link: "mailto:info@imlarbilaw.com",
+    },
+    {
+      icon: <BiPhone />,
+      link: "tel:0266812112",
+    },
+  ]
   return (
     <Box
       bg="brand.50"
@@ -17,7 +29,7 @@ const Footer = () => {
       }}
       mt={10}
     >
-      <Container maxW="7xl" py={14}>
+      <Container maxW="7xl" py={8}>
         <Stack
           w="full"
           justifyContent="space-between"
@@ -25,15 +37,19 @@ const Footer = () => {
           spacing={6}
         >
           <HStack spacing={8}>
-            {Array(4)
-              .fill()
-              .map((_, i) => (
-                <IconButton key={i} icon={<BsWhatsapp />} isRound />
-              ))}
+            {footerLinks.map((item, i) => (
+              <IconButton
+                as={Link}
+                href={item.link}
+                key={i}
+                icon={item.icon}
+                isRound
+              />
+            ))}
           </HStack>
           <Text fontSize="md">
-            Copyright {new Date().getFullYear()} Lawyer Larbi. All rights
-            reserved
+            Copyright {new Date().getFullYear()} Lawyer Isaac M. Larbi. All
+            rights reserved
           </Text>
         </Stack>
       </Container>
