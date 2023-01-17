@@ -17,12 +17,12 @@ import { BiLeftArrow, BiRightArrow } from "react-icons/all"
 import { useNavigate } from "react-router-dom"
 import { Autoplay } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
+import slide5 from "../assets/gallery-person-3.jpeg"
 import heroImage from "../assets/hero.png"
 import slide1 from "../assets/slide1.jpg"
 import slide2 from "../assets/slide2.jpg"
 import slide3 from "../assets/slide3.jpg"
 import slide4 from "../assets/slide4.jpg"
-import slide5 from "../assets/slide5.jpeg"
 
 const Hero = () => {
   const slides = [
@@ -75,9 +75,9 @@ const Hero = () => {
         justifyContent="center"
         alignItems="center"
         spacing={8}
-        mb={10}
+        mb={28}
       >
-        <VStack alignItems="flex-start" flex="1" spacing={4}>
+        <VStack alignItems="flex-start" flex="1" spacing={8}>
           <Heading
             textAlign={["center", "left"]}
             size={["lg", "md", "lg", "xl"]}

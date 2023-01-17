@@ -43,7 +43,7 @@ const theme = extendTheme(
       },
       Text: {
         baseStyle: {
-          fontSize: "1.25rem",
+          fontSize: "1.1rem",
         },
       },
       Link: {

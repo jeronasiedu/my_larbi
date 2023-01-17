@@ -29,6 +29,10 @@ const Navigation = () => {
       url: "/experience",
     },
     {
+      title: "Awards & Certificates",
+      url: "/awards-certificates",
+    },
+    {
       title: "Gallery",
       url: "/gallery",
     },
